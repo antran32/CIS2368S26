@@ -15,7 +15,7 @@ def create_con(host, username, userpw, dbname):
         print(f'the error {e} occured')
     return connection
 
-conn = create_con('#put endpoint link','admin', 'cis2368s26pw', 'cis2368s26db')
+conn = create_con('cis2368s26.c9y04kgmcei1.us-east-2.rds.amazonaws.com','admin', 'cis2368s26pw', 'cis2368s26db')
 cursor = conn.cursor(dictionary=True) #creates vehicle named that can be used to send inputs to db and birng back records 
 #Dictionary=True brings back records in the dictionary/list format easy to understand
 
