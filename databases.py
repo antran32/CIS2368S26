@@ -1,13 +1,13 @@
 import mysql.connector
 from mysql.connector import Error
 
-def create_con(host, username, userpw, dbname):
+def create_con(hostname, username, userpw, dbname):
     connection = None
     try:
         connection = mysql.connector.connect(
             host = hostname,
             user = username,
-            passowrd = userpw,
+            password = userpw,
             database = dbname
         )
         print("Connection successful")
@@ -25,7 +25,7 @@ rows = cursor.fetchall() #Brings them back unreferenced GC finna come eat it so 
 
 for user in rows:
     print(user)
-    print("The user's first name is" + user["firstname"])
+    print("The user's first name is " + user["firstname"])
 
 
 
